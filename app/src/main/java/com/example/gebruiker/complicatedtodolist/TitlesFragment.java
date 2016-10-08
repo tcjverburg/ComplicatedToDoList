@@ -16,7 +16,7 @@ public class TitlesFragment extends ListFragment {
     boolean mDualPane;
     int mCurCheckPosition = 0;
     private MainActivity mainActivity;
-    String [] test = mainActivity.read().split(",");
+
 
 
 
@@ -24,7 +24,7 @@ public class TitlesFragment extends ListFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-
+        String [] test = this.getArguments().getStringArray("edttext");
         Button btnAddList = (Button) getActivity().findViewById(R.id.addList);
 
         // Populate list with our static array of titles.
